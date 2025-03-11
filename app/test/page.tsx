@@ -1,7 +1,7 @@
 import { cookies, headers } from "next/headers"
 
 async function getOneTwoThree() {
-    const one = (await cookies()).getAll().filter((item) => ['NID_AUT', 'BBBB'].includes(item.name))
+    const one = (await cookies()).getAll().filter((item) => ['AAAA', 'BBBB'].includes(item.name))
     const two = (await cookies())
                 .toString()
                 .split(';')
@@ -9,7 +9,7 @@ async function getOneTwoThree() {
                     name: item.trim().split('=')[0],
                     value: item.trim().split('=')[1],
                 }))
-                .filter((item) => ['NID_AUT', 'BBBB'].includes(item.name))
+                .filter((item) => ['AAAA', 'BBBB'].includes(item.name))
     const three = (await headers())
                 .get('cookie')
                 ?.split(';')
@@ -17,7 +17,7 @@ async function getOneTwoThree() {
                     name: item.trim().split('=')[0],
                     value: item.trim().split('=')[1],
                 }))
-                .filter((item) => ['NID_AUT', 'BBBB'].includes(item.name))
+                .filter((item) => ['AAAA', 'BBBB'].includes(item.name))
                 
     console.log([...(await headers()).entries()])
     console.log(one)

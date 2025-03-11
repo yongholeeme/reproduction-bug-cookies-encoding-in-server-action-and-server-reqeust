@@ -2,14 +2,21 @@
 import Link from "next/link";
 import { move } from "./_action";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
   const router = useRouter()
+
+  useEffect(() => {
+    document.cookie = 'AAAA=this:is:non:encoded:value'
+    document.cookie = 'BBBB=this%3Ais%3Aencoded%3Avalue'
+  }, [])
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <Link href="/test">link</Link>
-      <button onClick={() => {router.push('/test')}}>router.push</button>
-      <button onClick={move}>redirect in server action</button>
+    <div className="flex flex-col items-center justify-center min-h-screen gap-4">
+      <Link href="/test">{'<Link />'} to /test</Link>
+      <button onClick={() => {router.push('/test')}}>router.push to /test</button>
+      <button onClick={move}>redirect in server action to /test</button>
     </div>
   );
 }
