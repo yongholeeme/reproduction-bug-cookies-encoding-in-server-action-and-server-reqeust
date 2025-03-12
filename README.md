@@ -8,4 +8,4 @@ In general server request, `headers().get('cookie')` returns values barely regar
 
 This problem is only reproduced in production. cc <https://github.com/vercel/next.js/issues/77010>
 
-<https://github.com/user-attachments/assets/1e026897-0c18-4634-ae3a-ed03d2beafd0>
+<https://github.com/user-attachments/assets/c9a0f3ec-e688-4b6a-8198-9fdb072893d5>
