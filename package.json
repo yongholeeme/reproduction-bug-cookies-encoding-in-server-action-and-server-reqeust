@@ -1,5 +1,5 @@
 {
-  "name": "reproduction-bug-encoding-server-action-nextjs",
+  "name": "reproduction-bug-cookies-encoding-in-server-action-and-server-reqeust",
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev --turbopack",
@@ -8,7 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "15.1.0",
+    "next": "canary",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

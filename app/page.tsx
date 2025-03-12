@@ -13,10 +13,10 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-4">
+    <>
       <Link href="/test">{'<Link />'} to /test</Link>
       <button onClick={() => {router.push('/test')}}>router.push to /test</button>
       <button onClick={move}>redirect in server action to /test</button>
-    </div>
+    </>
   );
 }
